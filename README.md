@@ -4,14 +4,10 @@ nodejs爬虫 + echarts可视化展示
 <br/>
 <br/>
 <br/>
-<br/>
-<br/>
 
 
 
 **node爬取豆瓣数据**
-<br/>
-<br/>
 <br/>
 
 ![](https://github.com/fffffabulous/doubanSpider/blob/master/douban.GIF "播放器")

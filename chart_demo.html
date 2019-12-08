@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>ECharts</title>
+    <!-- 引入 echarts.js -->
+    <script src="https://echarts.baidu.com/dist/echarts.min.js"></script>
+</head>
+<body>
+    <!-- 为 ECharts 准备一个具备大小（宽高）的 Dom -->
+    <div id="main" style="width: 600px; height: 400px;"></div>
+    <script>
+        // 基于准备好的 dom，初始化 echarts 实例
+        // 先找到 dom 元素
+        let element = document.querySelector('#main')
+        // 再使用 echarts.init 初始化 echarts 实例
+        let myChart = echarts.init(element)
+
+        // 指定图表的配置项和数据
+        // 这个配置项是 echarts 的核心
+        // https://echarts.baidu.com/option.html#title
+        // 需要重点关注 xAxis yAxis 和 series 这三项
+        let option = {
+            title: {
+                text: '中国天气'
+            },
+            tooltip: {},
+            legend: {
+                data:['天气预报']
+            },
+            xAxis: {
+                data: ["周一", "周二", "周三", "周四", "周五", "周六", "周日"]
+            },
+            yAxis: {},
+            series: [{
+                name: '天气预报',
+                type: 'bar',
+                data: [5, 20, 36, 10, 10, 20, 12]
+            }]
+        };
+
+        // 使用刚指定的配置项和数据显示图表
+        myChart.setOption(option)
+    </script>
+</body>
+</html>
